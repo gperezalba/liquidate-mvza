@@ -8,7 +8,7 @@
         type="text/javascript">
     </script>
     <script type="text/javascript">
-        const GRAPH_URL = "https://graph.pimarkets.io/subgraphs/name/gperezalba/masterWallet-subgraph-testnet";
+        const GRAPH_URL = "https://graph.pimarkets.io/subgraphs/name/gperezalba/bank-subgraph-mainnet/";
 
         generateFile = function(filename, data) {
             let blob = new Blob([data], {
@@ -48,6 +48,7 @@
             try {
                 response = await fetch(GRAPH_URL, {
                     "method": 'POST',
+                    "mode": 'cors',
                     "headers": {
                         "Accept": 'application/json',
                         'Content-Type': 'application/json',
