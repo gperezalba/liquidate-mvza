@@ -42,7 +42,7 @@
         async function querySubgraph() {
             let response;
             let responseData;
-            let query = '{ wallets ( where: {id: "0xb1d17f46b0cd78b07e949de7bf6f2b6572d73614"} ) { transactions (orderBy: timestamp, orderDirection: desc, where: {currency: "0x19fba3dba401388dc658670437df5c5971036a66"}) { from { id name { id } } to { id name { id } } amount currency { id tokenSymbol } timestamp pnftCategory pnftDescription { tokenId metadata } } } }'
+            let query = '{ wallets ( where: {id: "0xb307a3f713285274eeef70c2bb1623df6b1e6ec4"} ) { transactions (orderBy: timestamp, orderDirection: desc, where: {currency: "0x19fba3dba401388dc658670437df5c5971036a66", to:"0xb307a3f713285274eeef70c2bb1623df6b1e6ec4"}) { from { id name { id } } to { id name { id } } amount currency { id tokenSymbol } timestamp pnftCategory pnftDescription { tokenId metadata } } } }'
 
             try {
                 response = await fetch(GRAPH_URL, {
